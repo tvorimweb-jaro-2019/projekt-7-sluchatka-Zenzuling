@@ -1,0 +1,389 @@
+/* nejsme vcerejsi, pouzivame moderni box model */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
+
+
+/*
+Písmo pro běžný text:
+font-family: 'Open Sans', sans-serif;
+font-size: 15px+
+line-height: 1.5;
+
+Písmo pro menší nadpisy (kromě velkého h1):
+font-family: 'Rubik', sans-serif;
+font-weight: 700;
+
+
+Modra barva tlačítka:
+background-color: #3498db;
+
+Tlačítko při najetí myší:
+background-color: #2b80b9;
+*/
+
+/* -------------------------------------------------- */
+
+
+body {
+	padding: 0;
+	margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.5; /* proklad mezi radky */
+}
+
+
+/* vychozi barva pro odkaz */
+a {
+	color: #3498db;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #2b80b9;
+}
+
+.obsah-stranky {
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+.logo {
+	width: 200px;
+}
+
+.levy-roh {
+	text-align: center;
+}
+
+.hlavicka {
+	padding: 50px 30px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 250px;
+}
+
+.tlacitka {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.tlacitko {
+	padding: 8px 14px;
+	border: 1px solid black;
+	border-radius: 4px;
+	text-decoration: none;
+	color: black;
+	font-size: 13px;
+}
+
+.tlacitko:hover {
+	background-color: #2b80b9;
+	color: white;
+	border-color: #2b80b9;
+}
+
+.horni-menu {
+	list-style: none;
+	padding-left: 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 13px;
+	padding-top: 10px;
+
+}
+
+.horni-menu a {
+	text-decoration: none;
+	color: #959595;
+}
+
+.prvni-pulka {
+	background-color: #f5f5f5;
+	position: relative;
+}
+
+h1 {
+	font-size: 38px;
+	font-weight: 300;
+	line-height: 1.2;
+}
+
+.uvod {
+	padding-left: 20px;
+	padding-right: 20px;
+	min-height: 340px;
+}
+
+.uvodni-text {
+	padding-bottom: 20px;
+}
+
+.velke {
+	padding: 8px 14px;
+	border: 1px solid #3498db;
+	border-radius: 4px;
+	text-decoration: none;
+	color: white;
+	background-color: #3498db;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.velke:hover {
+	background-color: #f5f5f5;
+	color: #3498db;
+}
+
+.drobny {
+	font-size: 13px;
+}
+
+.slecna {
+	display: block;
+	width: 325px;
+}
+
+.druha-pulka {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding-top: 50px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.prvni, .druhy, .treti, .ctvrty {
+	border: 1px solid #959595;
+	border-radius: 4px;
+
+}
+
+.druhy, .treti, .ctvrty {
+	margin-top: 10px;
+}
+
+h2 {
+	font-size: 18px;
+	font-weight: 600;
+	padding-left: 120px;
+	padding-right: 10px;
+}
+
+.popis {
+	font-size: 13px;
+	line-height: 1.5;
+	margin: 30px 30px 10px 120px;
+}
+
+.ikonka {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin: 30px;
+}
+
+.odkaz {
+	font-size: 13px;
+	margin: 30px 30px 30px 120px;
+}
+
+.paticka {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #252525;
+	padding: 20px;
+	margin-top: 50px;
+}
+
+.copyright {
+	font-size: 10px;
+	color: #959595;
+	padding-top: 15px;
+	order: 1;
+}
+
+.paticka-menu {
+	font-size: 10px;
+	font-weight: bold;
+	font: 'Rubik', sans-serif;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+	padding: 0;
+}
+
+.paticka-menu a {
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+}
+
+@media (min-width: 768px) {
+
+	.obsah-stranky {
+		min-width: 768px;
+		margin: auto;
+	}
+
+	.levy-roh {
+		width: 100%;
+	}
+
+	.hlavicka {
+		padding: 50px 30px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		min-height: 200px;
+	}
+
+	.menu {
+		width: 50%;
+	}
+
+	.horni-menu {
+		text-align: left;
+		font-size: 13px;
+		padding-top: 10px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.tlacitka {
+		width: 50%;
+		padding-left: 100px;
+	}
+
+	h1 {
+		font-size: 42px;
+	}
+
+	.text-foto {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.uvod {
+		width: 50%;
+	}
+
+	.foto {
+		padding-top: 175px;
+		width: 50%;
+	}
+
+	.slecna {
+		width: 480px;
+		float: right;
+	}
+
+	.druha-pulka {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-top: 50px;
+	}
+
+	.prvni, .druhy, .treti, .ctvrty {
+		max-width: calc(50% - 15px);
+		border: 1px solid #959595;
+		border-radius: 4px;
+	}
+
+	.prvni, .treti {
+		margin-right: 30px;
+	}
+
+	.treti, .ctvrty {
+		margin-top: 30px;
+	}
+
+	.druhy {
+		margin-top: 0;
+	}
+
+	.paticka {
+		flex-direction: row;
+	}
+
+	.copyright {
+		order: 0;
+		padding-top: 0;
+		font-size: 13px;
+	}
+
+	.paticka-menu {
+		font-size: 13px;
+	}
+
+}
+
+@media (min-width: 1140px) {
+
+	.obsah-stranky {
+		min-width: 1140px;
+		margin: auto;
+	}
+
+	.hlavicka {
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		padding: 50px 0;
+		max-width: 1140px;
+		min-height: 40px;
+	}
+
+	.logo {
+		width: 120px;
+	}
+
+	.levy-roh, .menu, .tlacitka {
+		width: 33.3333%;
+	}
+
+	.tlacitka, .horni-menu {
+		padding: 0;
+		margin: 0;
+	}
+
+	.text-foto {
+		max-width: 1140px;
+	}
+
+	h1 {
+		font-size: 44px;
+		margin-top: 4px 0;
+	}
+
+	.uvod {
+		padding-left: 120px;
+		padding-right: 0px;
+		max-width: 420px;
+	}
+
+	.uvodni-text {
+		font-size: 18px;
+	}
+
+	.slecna {
+		width: 700px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.popis {
+		font-size: 15px;
+	}
+
+	.paticka {
+		padding: 50px 22px;
+	}
+
+}
